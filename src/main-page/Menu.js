@@ -1,10 +1,11 @@
 import React from "react";
+import Option from "./option"
 
 const Menu = function (props) {
   return (
     <ul>
       {props.options.map((op) => (
-        <li>{op} </li>
+        <Option  key={op} option={op} onDelete={ props.handleDelete } />
       ))}
     </ul>
   );
